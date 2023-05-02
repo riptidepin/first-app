@@ -1,5 +1,8 @@
+//import Button from 'react-bootstrap';
 import React from 'react';
 import styled from 'styled-components';
+import Form from '../components/Form';
+
 
 const Container = styled.div`
 display: flex;
@@ -9,7 +12,7 @@ height: 100vh;
 background-color: #fce4ec; /* Pink background color */
 `;
 
-const Form = styled.form`
+const Forms = styled.form`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -54,19 +57,10 @@ background-color: #ff69b4; /* Lighter pink button color on hover */
 }
 `;
 
-const Newpage = () => {
-return (
-    <Container>
-      <Form>
-        <Title>Login</Title>
-        <Label htmlFor="username">Username</Label>
-        <Input type="text" id="username" name="username" required/>
-        <Label htmlFor="password">Password</Label>
-        <Input type="password" id="password" name="password" required/>
-        <Button type="submit">Submit</Button>
-      </Form>
-    </Container>
-  );
+const Newpage = () =>{
+  return(
+    <Form />
+  )
+  
 };
-
 export default Newpage;
