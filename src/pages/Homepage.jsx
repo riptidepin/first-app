@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 100vh;
+height: 80vh;
 background-image: url('https://images.unsplash.com/photo-1523058467403-8d7b75e87336');
 background-size: cover;
 `;
