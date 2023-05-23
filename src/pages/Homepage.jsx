@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import myImage from '../Image/Barbie.png';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Container = styled.div`
 display: flex;
@@ -30,6 +32,18 @@ text-shadow: 2px 2px #ff99cc;
 
 
 const Homepage = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://api.publicapis.org/entries')
+    .then(response => {
+      setData(response.data);
+    });
+  },[])
+
+  console.log(data);
+
 return (
   <Container>
     <Title>Hello!</Title>
